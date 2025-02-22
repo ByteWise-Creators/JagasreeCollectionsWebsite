@@ -1,0 +1,80 @@
+@import url("https://fonts.googleapis.com/css2?family=Afacad:ital,wght@0,400..700;1,400..700&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Saira+Condensed:wght@100;200;300;400;500;600;700;800;900&display=swap");
+
+* {
+  @apply p-0 m-0 box-border;
+}
+
+@tailwind base;
+@tailwind components;
+
+.scrollbar-none::-webkit-scrollbar {
+  @apply hidden
+}
+
+.unset {
+  all: unset;
+}
+
+.hover-elavate {
+  @apply shadow hover:shadow-md transform hover:-translate-y-1 transition-all duration-150;
+}
+
+.theam-grad-1 {
+  @apply bg-gradient-to-t from-primary-700 to-primary-500;
+}
+
+.before-underline::before {
+  @apply content-[''] absolute -bottom-0 left-0 h-0.5 bg-black transition-all duration-300 hover:w-full;
+}
+
+@tailwind utilities;
+
+
+
+
+
+
+/* Animations */
+
+.animate-fromTop {
+  animation: fromTop 600ms forwards;
+}
+
+.animate-opacity {
+  animation: opacity 800ms ease-in-out;
+}
+
+.animate-fromRight {
+  animation: fromRight 600ms forwards;
+}
+
+@keyframes fromTop {
+  from {
+    transform: translateY(-50px);
+    opacity: 0.1;
+  }
+  to {
+    transform: translateY(0px);
+    opacity: 1;
+  }
+}
+
+@keyframes opacity {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+
+@keyframes fromRight {
+  from {
+    transform: translateX(50px);
+    opacity: 0.1;
+  }
+  to {
+    transform: translateX(0px);
+    opacity: 1;
+  }
+}
